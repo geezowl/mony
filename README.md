@@ -28,10 +28,10 @@ macOS 13+ pada Apple Silicon. Monitor harus mengaktifkan DDC/CI di menu OSD agar
 
 ```sh
 brew tap geezowl/mony https://github.com/geezowl/mony
-brew install --cask mony
+brew install --cask geezowl/mony/mony
 ```
 
-Update dengan `brew upgrade --cask mony`. Jika macOS memblokir app saat pertama dibuka, jalankan `xattr -cr /Applications/MonyBar.app`.
+Update dengan `brew upgrade --cask geezowl/mony/mony`. Jika macOS memblokir app saat pertama dibuka, jalankan `xattr -cr /Applications/MonyBar.app`.
 
 ### Manual
 
@@ -42,7 +42,7 @@ Update dengan `brew upgrade --cask mony`. Jika macOS memblokir app saat pertama 
    ```
 3. Untuk CLI: unzip, lalu `xattr -cr monyctl && chmod +x monyctl && mv monyctl /usr/local/bin/`.
 
-Untuk update, MonyBar mengecek rilis baru di GitHub sekali sehari dan menampilkan link unduhan di popover. Pengecekan ini bisa dimatikan di **Settings → Check for updates**. Unduh DMG baru dan timpa `MonyBar.app` yang lama, atau jalankan `brew upgrade --cask mony`.
+Untuk update, MonyBar mengecek rilis baru di GitHub sekali sehari dan menampilkan link unduhan di popover. Pengecekan ini bisa dimatikan di **Settings → Check for updates**. Unduh DMG baru dan timpa `MonyBar.app` yang lama, atau jalankan `brew upgrade --cask geezowl/mony/mony`.
 
 ## Fitur
 
