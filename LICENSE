@@ -1,0 +1,18 @@
+Mony Freeware License
+
+Copyright (c) 2026 Geezowl. All rights reserved.
+
+Permission is granted to download, install, use, and redistribute the unmodified
+Mony binaries (MonyBar.app and monyctl), free of charge, for personal and
+commercial purposes.
+
+You may not:
+  - modify, decompile, disassemble, or reverse engineer the software;
+  - sell the software or charge for its distribution;
+  - remove or alter this license or any copyright notice.
+
+The source code is not licensed to you and is not part of this distribution.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND. Mony sends
+DDC/CI commands to your displays; the author is not liable for any damage to
+hardware, data, or any other loss arising from its use.
