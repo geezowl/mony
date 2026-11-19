@@ -1,63 +1,70 @@
 # Mony
 
-Atur **brightness, contrast, resolusi, dan color profile** monitor eksternal dari Mac Apple Silicon, apa pun merk monitornya. Gratis.
+Control the **brightness, contrast, resolution and color profile** of external monitors from an Apple Silicon Mac, whatever the monitor brand. Free.
 
 <p>
   <img src="images/popover-light.png" width="300" alt="MonyBar light">
   <img src="images/popover-dark.png" width="300" alt="MonyBar dark">
 </p>
 
-## Unduh
+## Download
 
-Unduh versi terbaru yang stabil dari [Releases](../../releases/latest):
+Get the latest stable version from [Releases](../../releases/latest):
 
-| File | Isi |
+| File | Contents |
 |---|---|
-| `Mony-<versi>.dmg` | App menu bar `MonyBar.app` dengan slider, resolusi rekomendasi, preset, dan hotkey |
-| `Mony-<versi>-monyctl.zip` | CLI untuk skrip dan shortcut |
+| `Mony-<version>.dmg` | The `MonyBar.app` menu bar app with sliders, recommended resolutions, presets and hotkeys |
+| `Mony-<version>-monyctl.zip` | CLI for scripts and shortcuts |
 
-Rilis yang ditandai **Latest** di halaman Releases selalu versi stable yang direkomendasikan.
+The release marked **Latest** on the Releases page is always the recommended stable version.
 
-## Persyaratan
+## Requirements
 
-macOS 13+ pada Apple Silicon. Monitor harus mengaktifkan DDC/CI di menu OSD agar brightness hardware bisa dikontrol.
+macOS 13+ on Apple Silicon. The monitor must have DDC/CI enabled in its OSD menu for hardware brightness control.
 
-## Pemasangan
+## Installation
 
-### Lewat Homebrew
+### With Homebrew
 
 ```sh
 brew tap geezowl/mony https://github.com/geezowl/mony
 brew install --cask geezowl/mony/mony
 ```
 
-Update dengan `brew upgrade --cask geezowl/mony/mony`. Jika macOS memblokir app saat pertama dibuka, jalankan `xattr -cr /Applications/MonyBar.app`.
+Update with `brew upgrade --cask geezowl/mony/mony`. If macOS blocks the app on first launch, run `xattr -cr /Applications/MonyBar.app`.
 
-### Manual
+### Manually
 
-1. Buka file `.dmg`, lalu seret `MonyBar.app` ke folder `Applications`.
-2. Build ini belum di-notarize. Saat pertama dibuka, klik kanan `MonyBar.app` → **Open** → **Open**. Atau jalankan:
+1. Open the `.dmg` file and drag `MonyBar.app` into the `Applications` folder.
+2. This build is not notarized. On first launch, right-click `MonyBar.app` → **Open** → **Open**. Or run:
    ```sh
    xattr -cr /Applications/MonyBar.app
    ```
-3. Untuk CLI: unzip, lalu `xattr -cr monyctl && chmod +x monyctl && mv monyctl /usr/local/bin/`.
+3. For the CLI: unzip, then `xattr -cr monyctl && chmod +x monyctl && mv monyctl /usr/local/bin/`.
 
-Untuk update, MonyBar mengecek rilis baru di GitHub setiap kali menu dibuka (paling sering sekali per jam). Bila ada, muncul banner **Download** di bagian atas menu dan titik kecil di ikon menu bar. Status dan tombol **Check Now** ada di Settings. Pengecekan ini bisa dimatikan di **Settings → Check for updates**. Unduh DMG baru dan timpa `MonyBar.app` yang lama, atau jalankan `brew upgrade --cask geezowl/mony/mony`.
+### Updating
 
-## Fitur
+MonyBar checks GitHub for a new release whenever you open its menu (at most once an hour). When one is out, a banner appears at the top of the menu and a small dot on the menu bar icon. From the banner you choose how to update:
 
-- Brightness dan contrast monitor eksternal lewat DDC/CI; layar bawaan lewat DisplayServices.
-- Fallback software dimming (gamma) untuk monitor yang tidak mendukung DDC.
-- Resolusi: default 5 pilihan rekomendasi ("Larger Text" sampai "More Space"); mode advanced menampilkan semua mode.
-- Color profile ICC per display, dengan tombol reset ke profil bawaan.
-- Preset: simpan dan terapkan kombinasi brightness, contrast, resolusi, dan color profile.
-- Sinkron brightness ke semua monitor dan hotkey global ⌃⌥⌘ ↑/↓.
-- Notifikasi versi baru di popover.
+- **Update with Homebrew** runs Homebrew in the background and reopens Mony when it's done (shown only when Homebrew is installed).
+- **Download DMG** saves the new installer to your Downloads folder and opens it. Quit Mony, drag `MonyBar.app` into Applications to replace the old one, and open it again.
 
-## Lisensi
+The status and a **Check Now** button are in Settings. Checking can be turned off in **Settings → Check for updates**.
 
-Freeware. Gratis dipakai dan dibagikan tanpa modifikasi; source code tidak dirilis. Lihat [LICENSE](LICENSE).
+## Features
 
-## Masalah
+- Brightness and contrast for external monitors over DDC/CI; the built-in display through DisplayServices.
+- Software dimming (gamma) fallback for monitors without DDC.
+- Resolution: 5 recommended choices by default ("Larger Text" to "More Space"); advanced mode lists every mode.
+- Per-display ICC color profile, with a button to reset to the factory profile.
+- Presets: save and apply brightness, contrast, resolution and color profile together.
+- Brightness sync across all monitors and global hotkeys ⌃⌥⌘ ↑/↓.
+- In-app updates with Homebrew or the DMG.
 
-Laporkan lewat [Issues](../../issues). Set `MONY_DEBUG=1` untuk log DDC mentah ke stderr dan lampirkan di laporan.
+## License
+
+Freeware. Free to use and share unmodified; the source code is not released. See [LICENSE](LICENSE).
+
+## Issues
+
+Report them in [Issues](../../issues). Set `MONY_DEBUG=1` to log raw DDC traffic to stderr and attach it to your report.
