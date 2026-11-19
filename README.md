@@ -24,27 +24,24 @@ macOS 13+ on Apple Silicon. The monitor must have DDC/CI enabled in its OSD menu
 
 ## Installation
 
-### With Homebrew
+The quickest way, which also opens Mony without any macOS security prompt:
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/geezowl/mony/stable/install.sh | bash
+```
+
+Or with Homebrew:
 
 ```sh
 brew tap geezowl/mony https://github.com/geezowl/mony
 brew install --cask geezowl/mony/mony
 ```
 
-Update with `brew upgrade --cask geezowl/mony/mony`. If macOS blocks the app on first launch, run `xattr -cr /Applications/MonyBar.app`.
-
-### Manually
-
-1. Open the `.dmg` file and drag `MonyBar.app` into the `Applications` folder.
-2. This build is not notarized. On first launch, right-click `MonyBar.app` → **Open** → **Open**. Or run:
-   ```sh
-   xattr -cr /Applications/MonyBar.app
-   ```
-3. For the CLI: unzip, then `xattr -cr monyctl && chmod +x monyctl && mv monyctl /usr/local/bin/`.
+Installing from the DMG is also possible, but because Mony is not notarized, macOS blocks the first launch until you allow it in **System Settings → Privacy & Security → Open Anyway**. See [INSTALL.md](INSTALL.md) for every option step by step; the same guide is attached to each release.
 
 ### Updating
 
-MonyBar checks GitHub for a new release whenever you open its menu (at most once an hour). When one is out, a banner appears at the top of the menu and a small dot on the menu bar icon. From the banner you choose how to update:
+MonyBar checks GitHub for a new release whenever you open its menu (at most once an hour). When one is out, a banner appears at the top of the menu and a small dot on the menu bar icon. From the banner you choose how to update, and neither way triggers the security prompt:
 
 - **Update with Homebrew** runs Homebrew in the background and reopens Mony when it's done (shown only when Homebrew is installed).
 - **Download DMG** saves the new installer to your Downloads folder and opens it. Quit Mony, drag `MonyBar.app` into Applications to replace the old one, and open it again.

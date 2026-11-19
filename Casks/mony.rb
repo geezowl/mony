@@ -1,6 +1,6 @@
 cask "mony" do
-  version "0.5.0"
-  sha256 "f8b7609fa61a78bd6cc457cb3051d571b6abf5ced0cea1007de7872382b83997"
+  version "0.5.1"
+  sha256 "47ddc32e2516ef686221397638657e7af565d43989a1cc689120e70c6e539535"
 
   url "https://github.com/geezowl/mony/releases/download/v#{version}/Mony-#{version}.dmg"
   name "Mony"
@@ -12,10 +12,10 @@ cask "mony" do
 
   app "MonyBar.app"
 
-  zap trash: "~/Library/Application Support/Mony"
+  # Mony is not notarized; without this, macOS blocks the first launch ("Apple could not verify ...").
+  postflight do
+    system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{appdir}/MonyBar.app"]
+  end
 
-  caveats <<~EOS
-    MonyBar is not notarized. If macOS blocks it on first launch, run:
-      xattr -cr #{appdir}/MonyBar.app
-  EOS
+  zap trash: "~/Library/Application Support/Mony"
 end
