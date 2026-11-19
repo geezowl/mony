@@ -5,6 +5,7 @@ Control the **brightness, contrast, resolution and color profile** of external m
 <p>
   <img src="images/popover-light.png" width="300" alt="MonyBar light">
   <img src="images/popover-dark.png" width="300" alt="MonyBar dark">
+  <img src="images/about-dark.png" width="300" alt="About Mony">
 </p>
 
 ## Download
@@ -43,7 +44,7 @@ Installing from the DMG is also possible, but because Mony is not notarized, mac
 
 MonyBar checks GitHub for a new release whenever you open its menu (at most once an hour). When one is out, a banner appears at the top of the menu and a small dot on the menu bar icon. From the banner you choose how to update, and neither way triggers the security prompt:
 
-- **Update with Homebrew** runs Homebrew in the background while a progress bar shows each step. When it's done, click **Restart Mony** to switch to the new version (shown only when Homebrew is installed).
+- **Update with Homebrew** runs Homebrew in the background while a progress bar shows each step. When it's done, choose **Restart Now** to switch to the new version, or **Later** (shown only when Homebrew is installed).
 - **Download DMG** saves the new installer to your Downloads folder and opens it. Quit Mony, drag `MonyBar.app` into Applications to replace the old one, and open it again.
 
 The status and a **Check Now** button are in Settings. Checking can be turned off in **Settings → Check for updates**.
@@ -57,6 +58,12 @@ The status and a **Check Now** button are in Settings. Checking can be turned of
 - Presets: save and apply brightness, contrast, resolution and color profile together.
 - Brightness sync across all monitors and global hotkeys ⌃⌥⌘ ↑/↓.
 - In-app updates with Homebrew or the DMG.
+
+## Support and follow
+
+Mony is free. If it helps you, you can [buy me a coffee on Saweria](https://saweria.co/geezowl) ☕
+
+Follow Geezowl on [Instagram](https://www.instagram.com/geezowl), [TikTok](https://tiktok.com/@geezowl) and [YouTube](https://www.youtube.com/@geezowl_tv).
 
 ## License
 
