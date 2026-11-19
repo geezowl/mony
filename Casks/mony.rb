@@ -1,6 +1,6 @@
 cask "mony" do
-  version "0.4.3"
-  sha256 "6c4992b608648b43f6c6a4b899eb35b9ff1e0052538620f36ceaacaef5fea85b"
+  version "0.5.0"
+  sha256 "f8b7609fa61a78bd6cc457cb3051d571b6abf5ced0cea1007de7872382b83997"
 
   url "https://github.com/geezowl/mony/releases/download/v#{version}/Mony-#{version}.dmg"
   name "Mony"
