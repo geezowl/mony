@@ -42,7 +42,7 @@ Update dengan `brew upgrade --cask geezowl/mony/mony`. Jika macOS memblokir app 
    ```
 3. Untuk CLI: unzip, lalu `xattr -cr monyctl && chmod +x monyctl && mv monyctl /usr/local/bin/`.
 
-Untuk update, MonyBar mengecek rilis baru di GitHub sekali sehari dan menampilkan link unduhan di popover. Pengecekan ini bisa dimatikan di **Settings → Check for updates**. Unduh DMG baru dan timpa `MonyBar.app` yang lama, atau jalankan `brew upgrade --cask geezowl/mony/mony`.
+Untuk update, MonyBar mengecek rilis baru di GitHub setiap kali menu dibuka (paling sering sekali per jam). Bila ada, muncul banner **Download** di bagian atas menu dan titik kecil di ikon menu bar. Status dan tombol **Check Now** ada di Settings. Pengecekan ini bisa dimatikan di **Settings → Check for updates**. Unduh DMG baru dan timpa `MonyBar.app` yang lama, atau jalankan `brew upgrade --cask geezowl/mony/mony`.
 
 ## Fitur
 
