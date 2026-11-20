@@ -44,7 +44,7 @@ Installing from the DMG is also possible, but because Mony is not notarized, mac
 
 MonyBar checks GitHub for a new release whenever you open its menu (at most once an hour). When one is out, a banner appears at the top of the menu and a small dot on the menu bar icon. From the banner you choose how to update, and neither way triggers the security prompt:
 
-- **Update with Homebrew** runs Homebrew in the background while a progress bar shows each step. When it's done, choose **Restart Now** to switch to the new version, or **Later** (shown only when Homebrew is installed).
+- **Update with Homebrew** (shown only when Homebrew is installed) runs Homebrew in the background while a progress bar shows each step. When it's done, choose **Restart Now** to switch to the new version, or **Later**.
 - **Download DMG** saves the new installer to your Downloads folder and opens it. Quit Mony, drag `MonyBar.app` into Applications to replace the old one, and open it again.
 
 The status and a **Check Now** button are in Settings. Checking can be turned off in **Settings → Check for updates**.
